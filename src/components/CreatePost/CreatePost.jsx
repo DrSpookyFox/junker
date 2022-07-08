@@ -6,7 +6,7 @@ const CreatePost = () => {
     const [image, setImage] = useState("")
     const [caption, setCaption] = useState("")
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault()
        
         const submitPost = {
@@ -15,10 +15,7 @@ const CreatePost = () => {
             caption: caption
         }
 
-        // console.log("submitPost", submitPost)
-        // submit that object as a post request to an api
-        postAPI.create(submitPost)
-
+        const createdPost = await postAPI.create(submitPost)
     }  
 
     return <>
