@@ -35,15 +35,6 @@ if (response.ok) {
   alert(response.statusText);
 }
 
-//function to delete post
-
-async function deleteClickHandler(event) {
-  event.preventDefault();
-
-  //get post id from url
-  const postId = window.location.toString().split("/")[
-    window.location.toString().split("/").lenght - 1
-  ];
   
 document
   .querySelector(".edit-post-form")
