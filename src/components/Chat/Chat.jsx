@@ -1,4 +1,4 @@
-<!-- Chat Window -->
+// Chat Window
 <div class="chat-notification">
   <div class="chat-notification-logo-wrapper">
     <img class="chat-notification-logo" src="/img/logo.svg" alt="Chat Logo">
