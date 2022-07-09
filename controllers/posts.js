@@ -1,5 +1,4 @@
 // post model connects us to MongoDB
-
 const Post = require("../models/post")
 
 module.exports = {
