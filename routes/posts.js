@@ -6,7 +6,7 @@ const postsCtrl = require("../controllers/posts");
 
 /*---------- Protected Routes ----------*/
 // router.get('/', checkAuth, usersCtrl.index);
-// router.get("/", postsCtrl.index);
+router.get("/", postsCtrl.index);
 router.post("/", postsCtrl.create);
 
 

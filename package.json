@@ -38,14 +38,10 @@
       "last 1 safari version"
     ]
   },
-<<<<<<< HEAD
   "proxy": "http://localhost:3001",
   "devDependencies": {
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.5"
   }
-=======
-  "proxy": "http://localhost:3001"
->>>>>>> 51630dd7109da52b9c99d93c1e61b5c5910c3934
 }
