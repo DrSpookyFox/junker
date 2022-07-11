@@ -11,10 +11,13 @@ app.use(express.json());
 
 // require our routes
 const postRouter = require("./routes/posts")
+const userRouter = require("./routes/users")
+const authRouter = require("./routes/auth")
 
 // use our routes
 app.use("/api/posts", postRouter)
-
+app.use("/api/users", userRouter)
+app.use("/api/auth", authRouter)
 
 //express App needs this code to display static pages
 app.use(express.static("public"));

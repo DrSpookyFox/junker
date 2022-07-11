@@ -17,6 +17,10 @@ function create(req,res) {
     console.log('request body from controller create funciton', req.body)
     // const postData = req.body
     // mongoose.create 
+
+    // when creating a post, you need to pass the user id with the post data
+    // 
+
     Post.create(req.body).then((newlyCreatedPost) => {
         // console.log('controller create post successfully created a post', newlyCreatedPost)
         res.status(200).json(newlyCreatedPost)
