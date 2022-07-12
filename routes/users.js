@@ -33,6 +33,8 @@ function checkAuth(req, res, next) {
 router.use(decodeUserFromToken)
 router.get('/', checkAuth, usersCtrl.index)
 
+
 module.exports = router;
+
 
 

@@ -4,7 +4,7 @@ import Feed from "../Feed/Feed"
 import CreatePost from "../CreatePost/CreatePost"
 import * as postsAPI from "../../services/postService"
 
-const Dashboard = () => {
+const Dashboard = ({user}) => {
     const [posts, setPosts] = useState([])
 
     // useEffect will fire once every time this component (Dashboard) rerenders.
@@ -22,7 +22,7 @@ const Dashboard = () => {
     return <>
         <>Dashboard</>
         <Feed allPosts= {posts}/>
-        <CreatePost />
+        <CreatePost user={user}/>
     </>
 }
 

@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import * as postAPI from "../../services/postService"
 
-const CreatePost = () => {
+const CreatePost = ({user}) => {
     const [title, setTitle] = useState("")
     const [image, setImage] = useState("")
     const [caption, setCaption] = useState("")
@@ -12,10 +12,13 @@ const CreatePost = () => {
         const submitPost = {
             title: title,
             image: image,
-            caption: caption
+            caption: caption,
+            userName: user.username,
+            userId: user._id
+
         }
 
-        const createdPost = await postAPI.create(submitPost)
+        const createdPost = await postAPI.create(submitPost, user._id)
     }  
 
     return <>
