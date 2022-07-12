@@ -15,9 +15,10 @@ function Navbar() {
       </div> */}
       <div className="links">
         <Link to="/">Home</Link>
-        <Link to="/MyPost">My Post</Link>
-        <Link to="/About">About</Link>
-        <Link to="/Login">Login</Link>
+        <Link to="/logout">Logout</Link>
+        <Link to="/myposts">My Posts</Link>
+        {/* <Link to="/logout">Logout</Link> */}
+        <Link to="/dashboard">Dashboard</Link>
       </div>
     </div>
   )
