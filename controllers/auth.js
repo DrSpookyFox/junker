@@ -25,7 +25,9 @@ function createJWT(user) {
 
 async function login(req, res) {
   console.log('login server hit')
-  User.findOne({email: req.body.email}).then((user) => {
+  User.findOne({email: req.body.email})
+  .populate("posts")
+  .then((user) => {
     if (!user) return res.status(401).json({ err: 'User not found'})
     user.comparePassword(req.body.pw, (err, isMatch) => {
       if (isMatch) {

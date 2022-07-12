@@ -9,7 +9,7 @@ let userSchema = new Schema(
     email: String,
     username: String, 
     password: String,
-    posts: []
+    posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }]
   },
   {
     timestamps: true,

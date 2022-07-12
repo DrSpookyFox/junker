@@ -6,6 +6,8 @@ let postSchema = new Schema(
     title: String,
     caption: String, 
     image: String,
+    userName: String,
+    userId: String,
   },
   {
     timestamps: true,

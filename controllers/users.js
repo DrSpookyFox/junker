@@ -6,5 +6,6 @@ module.exports = {
 
 function index(req, res) {
   User.find({})
+  .populate("posts")
   .then(users => res.json(users))
 }

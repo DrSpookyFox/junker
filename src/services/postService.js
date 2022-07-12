@@ -7,8 +7,8 @@ export function index() {
     return fetch(BASE_URL,{}).then((res) => res.json())
 }
 
-export function create(postData) {
-    return fetch(BASE_URL, {
+export function create(postData, id) {
+    return fetch(`${BASE_URL}/${id}`, {
         method: "POST",
         headers: {
             "content-type": "application/json",
@@ -16,4 +16,25 @@ export function create(postData) {
         body: JSON.stringify(postData)
     }).then((res) => res.json())
 }
+
+export function update(postData, id) {
+    return fetch(`${BASE_URL}/${id}`, {
+        method: "PUT",
+        headers: {
+            "content-type": "application/json",
+        },
+        body: JSON.stringify(postData)
+    }).then((res) => res.json())
+}
+
+export function deleteOne(id) {
+    return fetch(`${BASE_URL}/${id}`, {
+        method: "DELETE",
+        headers: {
+            "content-type": "application/json",
+        },
+    }).then((res) => res.json())
+}
+
+
 
