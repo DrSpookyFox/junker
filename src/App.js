@@ -6,6 +6,7 @@ import {Routes, Route} from "react-router-dom"
 import LoginPage from "./components/LoginPage/LoginPage"
 import SignupPage from "./components/SignupPage/SignupPage"
 import * as authService from "./services/authService"
+import MyPosts from "./components/MyPosts/MyPosts";
 
 function App() {
   const [user, setUser] = useState(null)
@@ -30,6 +31,8 @@ function App() {
       {/* Dashboard */}
         <Route exact path="/dashboard" element={<Dashboard user={user}/>} />
       {/* Create Post */}
+      {/* MyPosts */}
+        <Route exact path="/myposts" element={user && <MyPosts posts={user.posts}/>} />
       </Routes>
     </div>
   );
