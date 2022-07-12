@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const db = require('./config/connection');
-const routes = require('./routes');
 require("dotenv").config();
 
 const app = express();
@@ -9,8 +8,16 @@ const PORT = process.env.PORT || 3001;
 
 app.use((exo = express.urlencoded({ extended: true })));
 app.use(express.json());
-app.use(routes);
 
+// require our routes
+const postRouter = require("./routes/posts")
+const userRouter = require("./routes/users")
+const authRouter = require("./routes/auth")
+
+// use our routes
+app.use("/api/posts", postRouter)
+app.use("/api/users", userRouter)
+app.use("/api/auth", authRouter)
 
 //express App needs this code to display static pages
 app.use(express.static("public"));
