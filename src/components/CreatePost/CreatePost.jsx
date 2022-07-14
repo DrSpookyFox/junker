@@ -15,7 +15,6 @@ const CreatePost = ({user}) => {
             caption: caption,
             userName: user.username,
             userId: user._id
-
         }
 
         const createdPost = await postAPI.create(submitPost, user._id)

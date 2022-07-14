@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react"
 import Post from "../Post/Post"
 import Feed from "../Feed/Feed"
+import Navbar from "../Navbar/Navbar"
 import CreatePost from "../CreatePost/CreatePost"
 import * as postsAPI from "../../services/postService"
 
@@ -21,38 +22,11 @@ const Dashboard = ({user}) => {
     // also can't return two fragments side by side
     return <>
         <>Dashboard</>
+        <Navbar />
         <Feed allPosts= {posts}/>
         <CreatePost user={user}/>
     </>
 }
 
 export default Dashboard
-
-
-// const allPosts = [
-//     {
-//         title: "sofa",
-//         image: "https://c.stocksy.com/a/GFu700/z9/1884506.jpg",
-//         caption: "this chair is smelly, old, broken, unsteady and probably worth a fortune",
-//         id: "818181"
-//     },
-//     {
-//         title: "Table",
-//         image: "https://c.stocksy.com/a/GFu700/z9/1884506.jpg",
-//         caption: "this chair is smelly, old, broken, unsteady and probably worth a fortune",
-//         id: "818181"
-//     },
-//     {
-//         title: "toilet seat",
-//         image: "https://c.stocksy.com/a/GFu700/z9/1884506.jpg",
-//         caption: "this chair is smelly, old, broken, unsteady and probably worth a fortune",
-//         id: "818181"
-//     },
-//     {
-//         title: "old chair",
-//         image: "https://c.stocksy.com/a/GFu700/z9/1884506.jpg",
-//         caption: "this chair is smelly, old, broken, unsteady and probably worth a fortune",
-//         id: "818181"
-//     }
-// ]
 
