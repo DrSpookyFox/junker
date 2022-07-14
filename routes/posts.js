@@ -6,8 +6,15 @@ const postsCtrl = require("../controllers/posts");
 
 /*---------- Protected Routes ----------*/
 // router.get('/', checkAuth, usersCtrl.index);
-// router.get("/", postsCtrl.index);
-router.post("/", postsCtrl.create);
+router.get("/", postsCtrl.index);
+router.post("/:id", postsCtrl.create);
+
+// update post
+router.put("/:id", postsCtrl.update);
+
+// delete a post
+router.delete("/:id", postsCtrl.deleteOne);
+
 
 
 /*---------- Auth Checker ----------*/
