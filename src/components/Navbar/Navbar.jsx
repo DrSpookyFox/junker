@@ -9,16 +9,16 @@ function Navbar() {
 
   return (
     <div className="navbar">
+     <nav class ="flex justify-center space-x-4">
      
-      {/* <div className="toggleButton">
-        <button></button>
-      </div> */}
       <div className="links">
-        <Link to="/">Home</Link>
-        <Link to="/MyPost">My Post</Link>
-        <Link to="/About">About</Link>
-        <Link to="/Login">Login</Link>
+        <Link to="/" class="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">Home</Link>
+        <Link to="/logout" class="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">Logout</Link>
+        <Link to="/myposts" class="font-bol px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">My Posts</Link>
+        {/* <Link to="/logout">Logout</Link> */}
+        <Link to="/dashboard" class ="font-bold font-me px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">Dashboard</Link>
       </div>
+      </nav>
     </div>
   )
 }
