@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as authService from "../../services/authService"
 
-const LoginPage = ({handleSignupOrLogin}) => {
+const LoginPage = ({ handleSignupOrLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -12,7 +12,7 @@ const LoginPage = ({handleSignupOrLogin}) => {
       email: email,
       pw: password,
     };
-    
+
     await authService.login(submitLogin).then(() => handleSignupOrLogin())
     // await authService.login(submitLogin).then(() => console.log('were good!'))
     // authService.login(submitLogin)
@@ -20,7 +20,7 @@ const LoginPage = ({handleSignupOrLogin}) => {
 
   };
 
-  return <div >
+  return <div class="font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">
     {/* username input */}
     <input
       type="text"
