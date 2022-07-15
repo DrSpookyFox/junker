@@ -1,17 +1,17 @@
-import { MentionsInput, Mention } from 'react-mentions'
+//import { MentionsInput, Mention } from 'react-mentions'
 
-<MentionsInput value={this.state.value} onChange={this.handleChange}>
-  <Mention
-    trigger="@"
-    data={this.props.users}
-    renderSuggestion={this.renderUserSuggestion}
-  />
-  <Mention
-    trigger="#"
-    data={this.requestTag}
-    renderSuggestion={this.renderTagSuggestion}
-  />
-</MentionsInput>
+//<MentionsInput value={this.state.value} onChange={this.handleChange}>
+  //<Mention
+    //trigger="@"
+    //data={this.props.users}
+    //renderSuggestion={this.renderUserSuggestion}
+  //>
+  //<Mention
+    //trigger="#"
+    //data={this.requestTag}
+    //renderSuggestion={this.renderTagSuggestion}
+  //>
+//</MentionsInput>
 
 
 const Post = ({post}) => {
